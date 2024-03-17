@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Photo Gallery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.grid img {
+  width: 300px;
+
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.grid img:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.about-section {
+  background-color: #333;
+  color: #fff;
+  margin-top: 10px;
+  padding: 50px;
+  transition: background-color 0.3s;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+}
+
+.contact-section {
+  background-color: #f1f1f1;
+  padding: 50px;
+  transition: background-color 0.3s;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #333;
+}
+
+.contact-form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #444;
+}
+
+.service-section {
+  background-color: #f9f9f9;
+  padding: 50px;
+  transition: background-color 0.3s;
+}
+
+.service-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.service-section p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.service-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.service-section li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.service-section .photos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.service-section .photos img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Photo Gallery</h1>
+</div>
+
+<div class="navbar">
+  <a href="#home">HOME</a>
+  <a href="#about">ABOUT</a>
+  <a href="#contact">CONTACT</a>
+  <a href="#service">SERVICE</a>
+</div>
+
+<div class="container">
+    <div class="grid">
+      <img src="https://source.unsplash.com/random/800x600"  alt="Canoeing again">
+      <img src="https://source.unsplash.com/random/800x601"  alt="Quiet day at the beach. Cold, but beautiful">
+      <img src="https://source.unsplash.com/random/800x602"  alt="The Beach. Me. Alone. Beautiful">
+    </div>
+  
+    <div class="grid row-2">
+      <img src="https://source.unsplash.com/random/800x603"  alt="Nature">
+      <img src="https://source.unsplash.com/random/800x604"  alt="Mountains">
+      <img src="https://source.unsplash.com/random/800x605"  alt="Cityscape">
+    </div>
+
+    <div class="about-section" id="about" style="text-align: center;">
+      <h2 >About Me</h2>
+      <p>Some text about me. I love taking photos of PEOPLE. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="service-section" id="service" >
+      <h2>Our Services</h2>
+      <p>Here are some of the services we offer:</p>
+      <ul>
+        <li>Photo Editing</li>
+        <li>Print Services</li>
+        <li>Photography Courses</li>
+      </ul>
+      <div class="photos">
+        <img src="https://source.unsplash.com/random/800x606" alt="Service Photo 1">
+        <img src="https://source.unsplash.com/random/800x607" alt="Service Photo 2">
+        <img src="https://source.unsplash.com/random/800x608" alt="Service Photo 3">
+      </div>
+    </div>
+
+    <div class="contact-section" id="contact">
+      <h2 style="text-align: center;">Contact Me</h2>
+      <div class="contact-form">
+        <form>
+          <input type="text" placeholder="Name" name="name" required>
+          <input type="email" placeholder="Email" name="email" required>
+          <textarea placeholder="Message" name="message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+</div>
+
+<div class="footer">
+  <p>Powered by HTML & CSS</p>
+</div>
+
+</body>
+</html>
